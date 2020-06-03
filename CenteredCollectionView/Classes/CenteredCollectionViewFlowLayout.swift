@@ -44,6 +44,8 @@ open class CenteredCollectionViewFlowLayout: UICollectionViewFlowLayout {
         return collectionView.indexPathForItem(at: currentCenteredPoint)?.row
     }
     
+    var isRTL = false
+    
     public override init() {
         super.init()
         scrollDirection = .horizontal
@@ -121,6 +123,8 @@ open class CenteredCollectionViewFlowLayout: UICollectionViewFlowLayout {
             return .zero
         }
     }
+    
+    open override var flipsHorizontallyInOppositeLayoutDirection: Bool { isRTL }
     
     /// Programmatically scrolls to a page at a specified index.
     ///
