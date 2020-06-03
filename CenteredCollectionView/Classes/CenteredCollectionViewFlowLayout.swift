@@ -99,12 +99,12 @@ open class CenteredCollectionViewFlowLayout: UICollectionViewFlowLayout {
         switch scrollDirection {
         case .horizontal:
             newOffset = candidateAttributesForRect.center.x - collectionView.bounds.size.width / 2
-            offset = newOffset - collectionView.contentOffset.x
-            
-            if (velocity.x < 0 && offset > 0) || (velocity.x > 0 && offset < 0) {
-                let pageWidth = itemSize.width + minimumLineSpacing
-                newOffset += velocity.x > 0 ? pageWidth : -pageWidth
-            }
+//            offset = newOffset - collectionView.contentOffset.x
+//            
+//            if (velocity.x < 0 && offset > 0) || (velocity.x > 0 && offset < 0) {
+//                let pageWidth = itemSize.width + minimumLineSpacing
+//                newOffset += velocity.x > 0 ? pageWidth : -pageWidth
+//            }
             return CGPoint(x: newOffset, y: proposedContentOffset.y)
             
         case .vertical:
